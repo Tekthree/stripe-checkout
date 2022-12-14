@@ -1,4 +1,4 @@
-const button = document.querySelector('button');
+const button = document.querySelector('.button');
 
 button.addEventListener('click', () => {
   fetch('/create-checkout-session', {
@@ -16,7 +16,7 @@ button.addEventListener('click', () => {
     })
     .then(({ url }) => {
       window.location = url;
-      console.log(url)
+      console.log(url);
     })
     .catch((e) => {
       console.error(e.error);
